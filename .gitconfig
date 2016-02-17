@@ -1,0 +1,5 @@
+[alias]
+	tree = log --oneline --decorate --graph
+	vtree = log --decorate --graph
+[push]
+	default = simple
