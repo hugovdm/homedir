@@ -1,0 +1,27 @@
+#!/bin/bash
+#
+# Grep through this month and last month's permanent history
+
+month=`date +%m | sed 's/^0//'`
+year=`date +%Y`
+let month--
+if [ "$month" = "0" ]; then
+  month=12
+  let year--
+fi
+
+month=$(printf '%02d' ${month})
+
+if [ "$1" == "-u" ]; then
+  user="$2"
+  shift; shift
+
+  grep -a "$*" /home/${user}/history/${year}${month}*
+  grep -a "$*" /home/${user}/history/$(date +%Y%m)*
+
+else
+
+  grep -a "$*" ~/history/${year}${month}*
+  grep -a "$*" ~/history/$(date +%Y%m)*
+
+fi

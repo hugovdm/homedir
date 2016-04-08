@@ -1,0 +1,38 @@
+#!/bin/bash
+#
+# Grep through this month and the previous two months' permanent history
+
+month_min1=`date +%m | sed 's/^0//'`
+year_min1=`date +%Y`
+let month_min1--
+if [ "$month_min1" = "0" ]; then
+  month_min1=12
+  let year_min1--
+fi
+
+month_min2=${month_min1}
+year_min2=${year_min1}
+let month_min2--
+if [ "$month_min2" = "0" ]; then
+  month_min2=12
+  let year_min2--
+fi
+
+month_min1=$(printf '%02d' ${month_min1})
+month_min2=$(printf '%02d' ${month_min2})
+
+if [ "$1" == "-u" ]; then
+  user="$2"
+  shift; shift
+
+  grep -a "$*" /home/${user}/history/${year_min2}${month_min2}*
+  grep -a "$*" /home/${user}/history/${year_min1}${month_min1}*
+  grep -a "$*" /home/${user}/history/$(date +%Y%m)*
+
+else
+
+  grep -a "$*" ~/history/${year_min2}${month_min2}*
+  grep -a "$*" ~/history/${year_min1}${month_min1}*
+  grep -a "$*" ~/history/$(date +%Y%m)*
+
+fi
