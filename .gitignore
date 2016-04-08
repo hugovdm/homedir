@@ -1,0 +1,13 @@
+.Xauthority
+.bash_history
+.bash_logout
+.bashrc
+.cache
+.config
+.dbus
+.fontconfig
+.gstreamer-0.10
+.profile
+.themes
+.xsession-errors
+python_games
