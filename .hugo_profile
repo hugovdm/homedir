@@ -1,0 +1,26 @@
+# hugovdm's bash config (sourced from .bashrc)
+
+HISTFILESIZE=10000
+HISTSIZE=10000
+
+export EDITOR="emacsclient -c -nw -a emacs"
+
+# Emacs shortcuts
+alias ec="emacsclient"
+alias ecc="emacsclient -c"
+alias ecn="emacsclient -n"
+alias eccn="emacsclient -c -n"
+alias ect="emacsclient -nw"
+
+if [ -d "$HOME/go1.6" ] ; then
+    PATH="$HOME/go1.6/bin:$PATH"
+    GOROOT=$HOME/go1.6
+fi
+if [ -d "$HOME/go" ] ; then
+    GOPATH=$HOME/go
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
