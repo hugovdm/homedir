@@ -12,6 +12,15 @@ alias ecn="emacsclient -n"
 alias eccn="emacsclient -c -n"
 alias ect="emacsclient -nw"
 
+# Other aliases
+alias gm=${HOME}/gclient/v8/v8/tools/dev/gm.py
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# Go
 if [ -d "$HOME/go1.6" ] ; then
     PATH="$HOME/go1.6/bin:$PATH"
     GOROOT=$HOME/go1.6
@@ -20,7 +29,15 @@ if [ -d "$HOME/go" ] ; then
     GOPATH=$HOME/go
 fi
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
+# Flutter
+if [ -d "$HOME/dev/flutter/bin" ] ; then
+    PATH="$HOME/dev/flutter/bin:$PATH"
+fi
+
+# Fuchsia
+if [ -d "$HOME/fuchsia/.jiri_root/bin" ] ; then
+    PATH="$HOME/fuchsia/.jiri_root/bin:$PATH"
+fi
+if [ -f "$HOME/fuchsia/scripts/fx-env.sh" ] ; then
+    . "$HOME/fuchsia/scripts/fx-env.sh"
 fi
