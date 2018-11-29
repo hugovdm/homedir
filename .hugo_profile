@@ -13,14 +13,14 @@ alias eccn="emacsclient -c -n"
 alias ect="emacsclient -nw"
 
 # Other aliases
-alias gm=${HOME}/gclient/v8/v8/tools/dev/gm.py
+alias gm=$HOME/gclient/v8/v8/tools/dev/gm.py
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-# Go
+# Go dev
 if [ -d "$HOME/go1.6" ] ; then
     PATH="$HOME/go1.6/bin:$PATH"
     GOROOT=$HOME/go1.6
@@ -29,15 +29,46 @@ if [ -d "$HOME/go" ] ; then
     GOPATH=$HOME/go
 fi
 
-# Flutter
-if [ -d "$HOME/dev/flutter/bin" ] ; then
+# Chromium dev
+if [ -d "$HOME/git/depot_tools" ] ; then
+    PATH="$HOME/git/depot_tools:$PATH"
+fi
+
+# Flutter dev
+if [ -d "$HOME/git/flutter/bin" ] ; then
+    PATH="$HOME/git/flutter/bin:$PATH"
+elif [ -d "$HOME/dev/flutter/bin" ] ; then
     PATH="$HOME/dev/flutter/bin:$PATH"
 fi
 
-# Fuchsia
+# Fuchsia dev
 if [ -d "$HOME/fuchsia/.jiri_root/bin" ] ; then
     PATH="$HOME/fuchsia/.jiri_root/bin:$PATH"
 fi
 if [ -f "$HOME/fuchsia/scripts/fx-env.sh" ] ; then
     . "$HOME/fuchsia/scripts/fx-env.sh"
+fi
+
+# Dart dev
+## dart .deb
+if [ -d "/usr/lib/dart/bin" ] ; then
+    PATH="/usr/lib/dart/bin:$PATH"
+fi
+## dart zip
+if [ -d "$HOME/dev/dart-sdk/bin" ] ; then
+    PATH="$HOME/dev/dart-sdk/bin:$PATH"
+fi
+## pub cache (e.g. for webdev)
+if [ -d "$HOME/.pub-cache/bin" ] ; then
+    PATH="$HOME/.pub-cache/bin:$PATH"
+fi
+## https://webdev.dartlang.org/guides/get-started
+function update_dart_webdev() {
+    pub global activate webdev
+    pub global activate stagehand
+}
+
+# Work Stuff
+if [ -f "$HOME/.hugo_profile_work" ] ; then
+    . "$HOME/.hugo_profile_work"
 fi
