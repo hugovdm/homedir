@@ -1,3 +1,12 @@
+# This is how one can set a reattach password:
+# password ODSJQf.4IJN7E    # "1234" with salt "OD".
+#
+# Generate a crypted password as follows:
+# $ perl -e 'print crypt "1234", "OD"; print "\n"; '
+# ODSJQf.4IJN7E
+#
+# (The salt should be a two letter random string, "OD" in this example.)
+
 #################
 #################
 ###
