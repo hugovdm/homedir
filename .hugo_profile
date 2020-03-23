@@ -21,12 +21,11 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 # Go dev
-if [ -d "$HOME/go1.6" ] ; then
-    PATH="$HOME/go1.6/bin:$PATH"
-    GOROOT=$HOME/go1.6
+if [ -d "/usr/local/go" ] ; then
+    PATH="/usr/local/go/bin:$PATH"
 fi
 if [ -d "$HOME/go" ] ; then
-    GOPATH=$HOME/go
+    export GOPATH=$HOME/go
 fi
 
 # Chromium dev
