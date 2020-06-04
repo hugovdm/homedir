@@ -1,4 +1,5 @@
-# hugovdm's bash config (sourced from .bashrc)
+# hugovdm's bash config
+# Typically sourced from .bashrc via ". ~/.hugo_profile".
 
 HISTFILESIZE=10000
 HISTSIZE=10000
@@ -14,6 +15,11 @@ alias ect="emacsclient -nw"
 
 # Other aliases
 alias gm=$HOME/gclient/v8/v8/tools/dev/gm.py
+
+# Rust dev
+if [ -d "$HOME/.cargo/bin" ] ; then
+    export PATH="$HOME/.cargo/bin:$PATH"
+fi
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
