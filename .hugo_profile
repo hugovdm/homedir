@@ -68,7 +68,7 @@ if [ -d "$HOME/.pub-cache/bin" ] ; then
     PATH="$HOME/.pub-cache/bin:$PATH"
 fi
 ## https://webdev.dartlang.org/guides/get-started
-function update_dart_webdev() {
+update_dart_webdev () {
     pub global activate webdev
     pub global activate stagehand
 }
