@@ -1,18 +1,30 @@
+/.asoundrc
+/.emacs.d/auto-save-list/
+/.lesshst
+/.local/share/
+/.pki/nssdb/
+/.ssh/
+!/.ssh/known_hosts
+
+# Raspberry Pi
+/MagPi
+/python_games/
+
 # Rust Dev
-.cargo
-.rustup
+/.cargo/
+/.rustup/
 
 # Other
-.Xauthority
-.bash_history
-.bash_logout
-.bashrc
-.cache
-.config
-.dbus
-.fontconfig
-.gstreamer-0.10
-.profile
-.themes
-.xsession-errors
-python_games
+/.Xauthority
+/.bash_history
+/.bash_logout
+/.bashrc
+/.cache/
+/.config/
+/.dbus/
+/.fontconfig
+/.gstreamer-0.10/
+/.profile
+/.themes/
+/.wget-hsts
+/.xsession-errors
