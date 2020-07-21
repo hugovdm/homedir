@@ -1,12 +1,15 @@
 # git clone git@github.com:hugovdm/homedir.git
 /homedir/
 
+# i18n
 # git clone git@github.com:hugovdm/cldr.git
 /cldr/
 # git clone https://github.com/unicode-org/cldr-staging.git
 /cldr-staging/
 # git clone https://github.com/unicode-org/icu.git
 /icu/
+# git clone https://github.com/icu-units/icu.git
+/icu-units/
 # git clone https://github.com/dart-lang/intl.git
 /intl/
 
@@ -15,5 +18,12 @@
 /ardour/
 # git clone https://github.com/RustAudio/cpal.git
 /cpal/
+# git clone https://github.com/RustAudio/rust-portaudio.git
+/rust-portaudio/
+# git clone https://github.com/irh/freeverb-rs.git
+/freeverb-rs/
+
 # git clone https://github.com/hugovdm/beats.git
 /beats/
+# git clone https://github.com/d2r2/go-dht.git
+/go-dht/
