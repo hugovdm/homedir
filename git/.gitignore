@@ -8,12 +8,18 @@
 /cldr-staging/
 # git clone https://github.com/unicode-org/icu.git
 /icu/
+/icu2/
+/icu3/
 # git clone https://github.com/icu-units/icu.git
 /icu-units/
 # git clone https://github.com/dart-lang/intl.git
 /intl/
+# more
+/dart_i18n/
+/ecma402/
+/i18n-examples/
 
-# Audio
+# Various Audio
 # git clone git://github.com/Ardour/ardour.git
 /ardour/
 # git clone https://github.com/RustAudio/cpal.git
@@ -23,6 +29,21 @@
 # git clone https://github.com/irh/freeverb-rs.git
 /freeverb-rs/
 
+# Rust Front-end & Graphics
+# git clone https://github.com/SergioBenitez/Rocket
+/Rocket/
+# git clone https://github.com/ggez/ggez.git
+/ggez/
+# git clone https://github.com/gfx-rs/wgpu-rs.git
+/wgpu-rs/
+# git clone https://github.com/hecrj/wgpu_glyph.git
+/wgpu_glyph/
+# git clone https://github.com/Yatekii/imgui-wgpu-rs.git
+/imgui-wgpu-rs/
+# git clone https://github.com/not-fl3/macroquad.git
+/macroquad/
+
+# Personal
 # git clone https://github.com/hugovdm/beats.git
 /beats/
 # git clone https://github.com/d2r2/go-dht.git
