@@ -73,6 +73,11 @@ update_dart_webdev () {
     pub global activate stagehand
 }
 
+# ICU dev
+if [ -d "$HOME/lib/java/jcite-1.13.0" ] ; then
+    export JCITE_DIR=$HOME/lib/java/jcite-1.13.0
+fi
+
 # Work Stuff
 if [ -f "$HOME/.hugo_profile_work" ] ; then
     . "$HOME/.hugo_profile_work"
