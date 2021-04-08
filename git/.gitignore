@@ -1,8 +1,8 @@
 # git clone git@github.com:hugovdm/homedir.git
 /homedir/
 
-# i18n
-# git clone git@github.com:hugovdm/cldr.git
+# unicode-org
+# git clone https://github.com/unicode-org/cldr.git
 /cldr/
 # git clone https://github.com/unicode-org/cldr-staging.git
 /cldr-staging/
@@ -10,6 +10,16 @@
 /icu/
 /icu2/
 /icu3/
+/icudocs/
+# git clone https://github.com/unicode-org/icu4x
+/icu4x/
+# git clone https://github.com/unicode-org/icu-data.git
+/icu-data/
+# git clone https://github.com/unicode-org/icu-docs.git
+/icu-docs/
+# git clone https://github.com/unicode-org/unicode-org.github.io.git
+/unicode-org.github.io/
+
 # git clone https://github.com/icu-units/icu.git
 /icu-units/
 # git clone https://github.com/dart-lang/intl.git
