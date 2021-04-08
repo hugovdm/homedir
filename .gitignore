@@ -3,8 +3,6 @@
 /.lesshst
 /.local/share/
 /.pki/nssdb/
-/.ssh/
-!/.ssh/known_hosts
 
 # Raspberry Pi
 /MagPi
